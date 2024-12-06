@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/images/bg2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.3);
+    background-color: #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(45deg, #0066cc, #0e71d3);
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #004a99, #0a5cad);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.login-container a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+    color: #004a99;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #ff3333;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        padding: 1rem;
+    }
+    
+    .login-container {
+        padding: 1.5rem;
+    }
+}
